@@ -8,11 +8,19 @@
         <link rel="stylesheet" type = "text/css" href = "15_11_2021.css"/>
         <!-- Linking External CSS rules ends here-->
     </head>
-    <body>
+    <body onload="welcomeFunction(); document.body.style.backgroundColor = 'pink'"
+	onresize="document.body.style.backgroundColor = 'lightblue'"
+	onkeydown="document.body.style.backgroundColor = 'white'"
+	onkeyup="document.body.style.backgroundColor = 'lightyellow'">
+	<script>
+	function welcomeFunction() {
+	alert("welcome");
+	}
+	</script>
         <p>
             <strong> Introduction to Information Systems </strong>
         </p>
-        <p class= "centered">
+        <p class= "centered" onmouseover="document.querySelector('.centered').style.font = 'bold 12pt arial, serif'">
             <em>
                Dana Al Jasem
                <br/>
@@ -20,7 +28,7 @@
             </em>
         </p>
         <p> Evolution of Homo Species</p>
-        <ul>
+        <ul id="unorderedL" onmouseover="document.getElementById('unorderedL').style.backgroundColor = 'purple'>
             <li> Homo habilis (able man) </li>
             <li> Homo erectus (upright man) </li>
             <li> Homo neanderthalensis </li>
@@ -30,7 +38,8 @@
                 <li> Homo sapiens sapiens</li>
             </ul>
         </ul>
-        <h1><strong> Human Evolution </strong></h1>
+        <h1 onmouseover="style.color = 'orange'; style.backgroundColor = 'lightgreen'"
+		onmouseout="style.color = 'red'; style.backgroundColor = 'white' "><strong> Human Evolution </strong></h1>
         <p> <img src="evolution-diagram.png"/> </p>
         <p>
             You can find the source of the image by clicking the link: 
@@ -40,7 +49,7 @@
         <p>
             The image below is a link, try it. 
             <a href="http:\\www.biologyonline.com/dictionary/homo-sapiens-sapiens">
-                <img src="evolution-diagram.png"/>
+                <img id="myImg" alt="Evolution diagram" onclick="alert(document.getElementById('myImg').alt)" src="evolution-diagram.png"/>
             </a>
         </p>
             <table>
